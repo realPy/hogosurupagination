@@ -1,4 +1,4 @@
-module hogosurupagination
+module github.com/realPy/hogosurupagination
 
 go 1.16
 
