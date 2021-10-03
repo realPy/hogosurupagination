@@ -76,8 +76,6 @@ func (p *Pagination) Refresh() {
 
 				var offset int = 2
 
-				//on rajoute le 1
-
 				if p.page > 1 {
 					p.additem(d, linkpattern, 0)
 				}
@@ -122,39 +120,6 @@ func (p *Pagination) Refresh() {
 
 				p.additem(d, linkpattern, (p.page - 1))
 
-				/*
-					if p.page > 1 && p.current != 0 {
-						p.additem(d, linkpattern, 0)
-					}
-
-					if p.current-offset > 0 {
-						p.additem(d, linkpattern, -1)
-					}
-
-					for i := p.current - offset; i < p.current; i++ {
-						if i > 0 {
-							p.additem(d, linkpattern, i)
-						}
-
-					}
-
-					for i := p.current; i <= p.current+offset; i++ {
-						if i < p.page {
-							p.additem(d, linkpattern, i)
-						}
-					}
-					println(fmt.Sprintf("current: %d offset:%d NbPage:%d", p.current, offset, p.page))
-
-					if p.current+offset == (p.page - 2) {
-
-						p.additem(d, linkpattern, (p.page - 1))
-					}
-
-					if p.current+offset < (p.page - 2) {
-						p.additem(d, linkpattern, -1)
-						p.additem(d, linkpattern, (p.page - 1))
-					}
-				*/
 			}
 		}
 
