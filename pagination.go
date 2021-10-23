@@ -44,7 +44,7 @@ func (p *Pagination) additem(d document.Document, pattern element.Element, page 
 		if elemfrom, ok := clone.(htmlelement.HtmlElementFrom); ok {
 
 			var elem htmlelement.HtmlElement
-			elem = elemfrom.HtmlElement()
+			elem = elemfrom.HtmlElement_()
 
 			elem.RemoveAttribute("id")
 			if p.OnConfigureItem != nil {

@@ -102,6 +102,7 @@ func (w *GlobalContainer) OnUnload() {
 
 func main() {
 
+	hogosuru.Init()
 	hogosurudebug.EnableDebug()
 	hogosuru.Router().DefaultRendering(&GlobalContainer{})
 	hogosuru.Router().Start(hogosuru.HASHROUTE)
